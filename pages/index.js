@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import Banner from '../components/Banner'
-import Card from '../components/Card'
-import Layout from '../components/Layout'
+import Banner from '../components/banner.js'
+import Card from '../components/card.js'
+import Layout from '../components/layout.js'
 import randm from '../public/images/rickandmorty.png'
 
 export default function Home() {

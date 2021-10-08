@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '../components/Layout'
+import Layout from '../components/layout.js'
 import unfetch from 'isomorphic-unfetch'
 import Link from 'next/link'
 import slug from 'slug'
