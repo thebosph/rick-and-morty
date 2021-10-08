@@ -3,7 +3,6 @@ import Layout from '../components/Layout'
 import unfetch from 'isomorphic-unfetch'
 import Link from 'next/link'
 import slug from 'slug'
-import Image from 'next/image'
 
 const Characters = ({ characters }) => {
   return (
@@ -11,7 +10,7 @@ const Characters = ({ characters }) => {
       <ul className="d-flex flex-wrap container justify-content-center">
         {characters?.results.map((character) => (
           <li className="card  cardd m-2" key={character.id}>
-            <Image
+            <img
               width={400}
               height={400}
               className="card-img-top"
