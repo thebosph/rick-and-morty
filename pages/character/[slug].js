@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 import { useRouter } from 'next/router'
 
@@ -18,7 +19,12 @@ const CharacterDetails = ({ character }) => {
             <div className="col-md-6 border-end">
               <div className="d-flex flex-column justify-content-center">
                 <div className="main_image">
-                  <img src={image} id="main_product_image" width="350"></img>
+                  <Image
+                    src={image}
+                    id="main_product_image"
+                    width={350}
+                    height={350}
+                  />
                 </div>
               </div>
             </div>
