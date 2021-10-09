@@ -13,11 +13,11 @@ const CharacterDetails = ({ character }) => {
   return (
     <Layout>
       <div className="container mt-5 mb-5">
-        <div className="card">
+        <div className="card customHover">
           <div className="row">
-            <div className="col-md-6">
-              <div className="d-flex flex-column justify-content-center">
-                <div className="main_image">
+            <div className="col-md-6 customHover">
+              <div className="d-flex  flex-column justify-content-center">
+                <div className="main_image ">
                   <img
                     src={image}
                     id="main_product_image"
@@ -27,18 +27,18 @@ const CharacterDetails = ({ character }) => {
                 </div>
               </div>
             </div>
-            <div className="col-md-6 bg-danger customHover bg-gradient">
-              <div className="p-3 right-side">
-                <div className="d-flex justify-content-between align-items-center">
+            <div className="col-md-6 container customHover">
+              <div className="p-3 right-side container">
+                <div className="d-flex container justify-content-between align-items-center">
                   <h3>{name} </h3>{' '}
                 </div>
-                <div className="mt-2 pr-3 content text-white">
+                <div className="mt-2 container pr-3 content text-white">
                   <p>Gender: {gender}</p>
                   <p>Status: {status} </p>
                   <p>Species: {species}</p>
                 </div>
 
-                <div className="buttons d-flex flex-row mt-5 gap-3">
+                <div className="buttons container d-flex flex-row mt-5 gap-3">
                   {' '}
                   <button
                     onClick={() => router.back()}
@@ -64,9 +64,15 @@ const CharacterDetails = ({ character }) => {
             width: 100%;
             overflow: hidden;
           }
-          .customHover:hover {
-            opacity: 0.9;
-            transition: 0.1s;
+
+          .customHover {
+            background: rgb(251, 0, 182), 0.5;
+            background: linear-gradient(
+              90deg,
+              rgba(251, 0, 182, 1) 0%,
+              rgba(222, 112, 199, 0.8491771708683473) 49%,
+              rgba(173, 63, 158, 1) 100%
+            );
           }
         `}
       </style>
