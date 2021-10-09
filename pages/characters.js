@@ -9,10 +9,10 @@ const Characters = ({ characters }) => {
     <Layout>
       <ul className="d-flex flex-wrap container justify-content-center">
         {characters?.results.map((character) => (
-          <li className="card  cardd m-2" key={character.id}>
+          <li className="card p-3 opacity-50 cardd m-2" key={character.id}>
             <img
-              width={400}
-              height={400}
+              width={300}
+              height={250}
               className="card-img-top"
               src={character.image}
               alt={character.name}
@@ -21,7 +21,9 @@ const Characters = ({ characters }) => {
               href="/character/[slug]"
               as={`/character/${slug(character.name)}-${character.id}`}
             >
-              <a>{character.name} | Click for details...</a>
+              <a className="fw-light text-decoration-none text-white">
+                {character.name} | Click for details...
+              </a>
             </Link>
           </li>
         ))}
@@ -30,6 +32,7 @@ const Characters = ({ characters }) => {
       <style jsx>{`
         .card {
           width: 18rem;
+          background-color: rgba(0, 0, 0, 0.5);
         }
       `}</style>
     </Layout>

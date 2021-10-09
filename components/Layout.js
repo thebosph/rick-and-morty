@@ -9,8 +9,7 @@ const Layout = ({ children }) => {
       <div className="container">{children}</div>
       <Footer />
       <style jsx global>
-        {`.page-transition-wrapper {
-          height: 100%;`}
+        {``}
       </style>
     </div>
   )

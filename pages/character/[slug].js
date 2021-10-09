@@ -14,28 +14,25 @@ const CharacterDetails = ({ character }) => {
     <Layout>
       <div className="container mt-5 mb-5">
         <div className="card">
-          <div className="row g-0">
-            <div className="col-md-6 border-end">
+          <div className="row">
+            <div className="col-md-6">
               <div className="d-flex flex-column justify-content-center">
                 <div className="main_image">
                   <img
                     src={image}
                     id="main_product_image"
-                    width={350}
-                    height={350}
+                    width={500}
+                    height={500}
                   />
                 </div>
               </div>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 bg-danger customHover bg-gradient">
               <div className="p-3 right-side">
                 <div className="d-flex justify-content-between align-items-center">
                   <h3>{name} </h3>{' '}
-                  <span className="heart">
-                    <i className="bx bx-heart"></i>
-                  </span>
                 </div>
-                <div className="mt-2 pr-3 content">
+                <div className="mt-2 pr-3 content text-white">
                   <p>Gender: {gender}</p>
                   <p>Status: {status} </p>
                   <p>Species: {species}</p>
@@ -55,6 +52,7 @@ const CharacterDetails = ({ character }) => {
           </div>
         </div>
       </div>
+
       <style jsx>
         {`
           .main_image {
@@ -65,6 +63,10 @@ const CharacterDetails = ({ character }) => {
             height: 400px;
             width: 100%;
             overflow: hidden;
+          }
+          .customHover:hover {
+            opacity: 0.9;
+            transition: 0.1s;
           }
         `}
       </style>
